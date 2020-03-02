@@ -1,14 +1,14 @@
 package model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class RestaurantThing {
     private final String restaurantName;
     private final String dishName;
     private final Float dishPrice;
-    private final LocalDateTime dateTime;
+    private final LocalDate dateTime;
 
-    public RestaurantThing(String restaurantName, String dishName, Float dishPrice, LocalDateTime dateTime) {
+    public RestaurantThing(String restaurantName, String dishName, Float dishPrice, LocalDate dateTime) {
         this.restaurantName = restaurantName;
         this.dishName = dishName;
         this.dishPrice = dishPrice;
@@ -27,7 +27,7 @@ public class RestaurantThing {
         return dishPrice;
     }
 
-    public LocalDateTime getDateTime() {
+    public LocalDate getDate() {
         return dateTime;
     }
 }
