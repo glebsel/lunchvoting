@@ -16,8 +16,22 @@ public class VotingServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        log.info("getAll");
-        request.setAttribute("things", RestaurantThingUtil.getThisDateRestThings(RestaurantThingUtil.RestaurantThing, LocalDate.now()));
-        request.getRequestDispatcher("/voting.jsp").forward(request, response);
+
+        String action = request.getParameter("action");
+
+        switch (action == null ? "all" : action) {
+            case "vote":
+                Integer id = Integer.parseInt(request.getParameter("id"));
+                RestaurantThingUtil.changeVoted(id);
+                request.setAttribute("things", RestaurantThingUtil.getThisDateRestThings(RestaurantThingUtil.restaurantThings, LocalDate.now()));
+                request.getRequestDispatcher("/voting.jsp").forward(request, response);
+                break;
+            case "all":
+            default:
+                log.info("getAll");
+                request.setAttribute("things", RestaurantThingUtil.getThisDateRestThings(RestaurantThingUtil.restaurantThings, LocalDate.now()));
+                request.getRequestDispatcher("/voting.jsp").forward(request, response);
+                break;
+        }
     }
 }

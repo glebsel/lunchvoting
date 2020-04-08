@@ -5,11 +5,11 @@
 <head>
     <title>Voting list</title>
     <style>
-        .normal {
+        .no {
             color: green;
         }
 
-        .excess {
+        .yes {
             color: red;
         }
     </style>
@@ -26,21 +26,19 @@
             <th>DishName</th>
             <th>DishPrice</th>
             <th></th>
-            <th></th>
         </tr>
         </thead>
         <c:forEach items="${things}" var="thing">
             <jsp:useBean id="thing" type="model.RestaurantThing"/>
+            <tr class="${thing.wasVoted ? 'yes' : 'no'}">
                 <td>${thing.restaurantName}</td>
                 <td>${thing.dishName}</td>
                 <td>${thing.dishPrice}</td>
-                <td><a href="voting?action=update&id=${thing.id}">Update</a></td>
-                <td><a href="voting?action=delete&id=${thing.id}">Delete</a></td>
                 <td><a href="voting?action=vote&id=${thing.id}">Vote</a></td>
             </tr>
         </c:forEach>
     </table>
-    <h3>Add</h3>
+    <h3><a href="adding">Add</a></h3>
 </section>
 </body>
 </html>
