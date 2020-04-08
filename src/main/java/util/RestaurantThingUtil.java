@@ -12,19 +12,13 @@ import java.util.stream.Collectors;
 
 public class RestaurantThingUtil {
 
-//    public static List<RestaurantThing> RestaurantThing = Arrays.asList(
-//            new RestaurantThing("1", "1", 1.2f, LocalDate.now()),
-//            new RestaurantThing("2", "2", 3.2f, LocalDate.now()),
-//            new RestaurantThing("3", "3", 3.2f, LocalDate.ofYearDay(2001,1))
-//    );
-
-//    {
-//        restaurantThings.add(new RestaurantThing("1", "1", 1.2f, LocalDate.now()));
-//        restaurantThings.add(new RestaurantThing("2", "2", 3.2f, LocalDate.now()));
-//        restaurantThings.add(new RestaurantThing("3", "3", 3.2f, LocalDate.ofYearDay(2001,1)));
-//    }
-
     public static ArrayList<RestaurantThing> restaurantThings = new ArrayList<RestaurantThing>();
+
+    static {
+        restaurantThings.add(new RestaurantThing("1", "1", 1.2f, LocalDate.now()));
+        restaurantThings.add(new RestaurantThing("2", "2", 3.2f, LocalDate.now()));
+        restaurantThings.add(new RestaurantThing("3", "3", 3.2f, LocalDate.ofYearDay(2001,1)));
+    }
 
     public static List<RestaurantThing> getThisDateRestThings(List<RestaurantThing> restaurantThings, LocalDate localDate) {
         return restaurantThings.stream()
