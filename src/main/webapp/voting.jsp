@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%--<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>--%>
 <html>
 <head>
     <title>Meal list</title>
@@ -28,14 +27,11 @@
             <th>Calories</th>
         </tr>
         </thead>
-        <c:forEach items="${meals}" var="meal">
-            <jsp:useBean id="meal" type="model.MealTo"/>
-            <tr class="${meal.excess ? 'excess' : 'normal'}">
-                <td>
-
-                </td>
-                <td>${meal.description}</td>
-                <td>${meal.calories}</td>
+        <c:forEach items="${things}" var="thing">
+            <jsp:useBean id="thing" type="model.RestaurantThing"/>
+                <td>${thing.restaurantName}</td>
+                <td>${thing.dishName}</td>
+                <td>${thing.dishPrice}</td>
             </tr>
         </c:forEach>
     </table>

@@ -8,7 +8,7 @@
 
     <servlet>
         <servlet-name>mealServlet</servlet-name>
-        <servlet-class>web.MealServlet</servlet-class>
+        <servlet-class>web.VotingServlet</servlet-class>
         <load-on-startup>0</load-on-startup>
     </servlet>
     <servlet-mapping>
