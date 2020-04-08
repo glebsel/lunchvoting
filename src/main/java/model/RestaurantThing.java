@@ -4,12 +4,20 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class RestaurantThing {
+    private final Integer id;
     private final String restaurantName;
     private final String dishName;
     private final Float dishPrice;
     private final LocalDate dateTime;
+    private static Integer count = 0;
+
+//    public RestaurantThing(String restaurantName, String dishName, Float dishPrice, LocalDate dateTime) {
+//        this(null, restaurantName, dishName, dishPrice, dateTime);
+//    }
 
     public RestaurantThing(String restaurantName, String dishName, Float dishPrice, LocalDate dateTime) {
+        count++;
+        this.id = count;
         this.restaurantName = restaurantName;
         this.dishName = dishName;
         this.dishPrice = dishPrice;
@@ -35,10 +43,15 @@ public class RestaurantThing {
     @Override
     public String toString() {
         return "MealTo{" +
-                "dateTime=" + dateTime +
+                "id=" + id +
+                ", restaurantName=" + restaurantName +
+                ", dishName='" + dishName + '\'' +
                 ", dishName='" + dishName + '\'' +
                 ", dishPrice=" + dishPrice +
-                ", restaurantName=" + restaurantName +
                 '}';
+    }
+
+    public Integer getId() {
+        return id;
     }
 }
