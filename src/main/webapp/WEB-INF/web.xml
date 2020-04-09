@@ -8,7 +8,7 @@
 
     <servlet>
         <servlet-name>votingServlet</servlet-name>
-        <servlet-class>web.VotingServlet</servlet-class>
+        <servlet-class>DLVS.web.VotingServlet</servlet-class>
         <load-on-startup>0</load-on-startup>
     </servlet>
     <servlet-mapping>
@@ -18,7 +18,7 @@
 
     <servlet>
         <servlet-name>addingServlet</servlet-name>
-        <servlet-class>web.AddingServlet</servlet-class>
+        <servlet-class>DLVS.web.AddingServlet</servlet-class>
         <load-on-startup>0</load-on-startup>
     </servlet>
     <servlet-mapping>

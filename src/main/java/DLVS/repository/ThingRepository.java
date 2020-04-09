@@ -1,6 +1,6 @@
-package repository;
+package DLVS.repository;
 
-import model.RestaurantThing;
+import DLVS.model.RestaurantThing;
 import java.util.Collection;
 
 public interface ThingRepository {

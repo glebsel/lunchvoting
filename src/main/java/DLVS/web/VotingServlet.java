@@ -1,8 +1,8 @@
-package web;
+package DLVS.web;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import util.RestaurantThingUtil;
+import DLVS.util.RestaurantThingUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

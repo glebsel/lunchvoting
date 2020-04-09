@@ -1,12 +1,9 @@
-package repository;
+package DLVS.repository.inmemory;
 
-import model.RestaurantThing;
-import util.RestaurantThingUtil;
+import DLVS.model.RestaurantThing;
+import DLVS.repository.ThingRepository;
 
 import java.util.Collection;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class InMemoryThingRepository implements ThingRepository {
     @Override

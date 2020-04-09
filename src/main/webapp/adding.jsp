@@ -25,7 +25,7 @@
 <section>
     <h3><a href="index.html">Home</a></h3>
     <hr>
-<%--    <jsp:useBean id="thing" type="model.RestaurantThing" scope="request"/>--%>
+<%--    <jsp:useBean id="thing" type="DLVS.model.RestaurantThing" scope="request"/>--%>
     <form method="post" action="adding">
         <dl>
             <dt>restaurantName:</dt>

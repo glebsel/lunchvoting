@@ -29,7 +29,7 @@
         </tr>
         </thead>
         <c:forEach items="${things}" var="thing">
-            <jsp:useBean id="thing" type="model.RestaurantThing"/>
+            <jsp:useBean id="thing" type="DLVS.model.RestaurantThing"/>
             <tr class="${thing.wasVoted ? 'yes' : 'no'}">
                 <td>${thing.restaurantName}</td>
                 <td>${thing.dishName}</td>
